@@ -1,5 +1,6 @@
 export const ColorPalette = {
     input1:'#E5E5E5',
+    input2:'#BDBDBD',
     titleCard_b:'#295E8F',
     titleCard_g:'#18A841',
     c3:'#12A67C',

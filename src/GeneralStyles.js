@@ -1,3 +1,4 @@
+import React from 'react';
 import { ColorPropType } from 'react-native';
 import {Dimensions} from 'react-native';
 import { ColorPalette } from './ColorPalette';
@@ -36,6 +37,7 @@ const ProfileFloater={
     width:Dimensions.get('window').width/10*8,
     backgroundColor:'white',
     flex:1,
+    justifyContent:'center',
 };
 
 const ButtonContainerStyleGeneral={

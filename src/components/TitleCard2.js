@@ -6,7 +6,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import { ColorPalette } from '../ColorPalette';
 import {LinearGradient} from 'expo-linear-gradient';
 
-const TitleCard = ({title,description}) =>{
+const TitleCard2 = ({title,description}) =>{
     return (
         <SafeAreaView style={{flex:1}}>
             <LinearGradient
@@ -32,7 +32,14 @@ const styles = StyleSheet.create({
     container:{
         paddingHorizontal:20,
         paddingTop:15,
-        paddingBottom:Dimensions.get('window').height/8,
+        width:500,
+        height:300,
+        position:'absolute',
+        top:0,
+        bottom:0,
+        left:0,
+        right:0,
+       
         //backgroundColor:'green'
     },
     titleText:{
@@ -46,4 +53,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default TitleCard;
+export default TitleCard2;
