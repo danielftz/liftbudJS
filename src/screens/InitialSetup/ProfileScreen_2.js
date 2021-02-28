@@ -16,53 +16,49 @@ const ProfileScreen_2 = ({navigation}) =>{
     return (
             <DismissKeyboardView>
                 <TitleCard title='Let Us Help' description='Use our bodyfat calculator or simply estimate...'/>
-                    <ScrollView 
-                    style={styles.scrollViewStyle}
-                    contentContainerStyle={styles.scrollContainerStyle}
-                    >
-                        <Input 
-                            labelStyle={GeneralStyles.InputLabelText} 
-                            inputContainerStyle={GeneralStyles.InputBox} 
-                            keyboardType='number-pad'
-                            selectTextOnFocus={true} 
-                            label='Neck Circumference (cm)'
-                        />
-                        <Input 
-                            labelStyle={GeneralStyles.InputLabelText} 
-                            inputContainerStyle={GeneralStyles.InputBox} 
-                            keyboardType='number-pad'
-                            selectTextOnFocus={true} 
-                            label='Waist Circumference (cm)'
-                        />
-                        <Input 
-                            labelStyle={GeneralStyles.InputLabelText} 
-                            inputContainerStyle={GeneralStyles.InputBox} 
-                            keyboardType='number-pad'
-                            selectTextOnFocus={true} 
-                            label='Hip Circumference (cm)'
-                        />
-                        <Input 
-                            labelStyle={GeneralStyles.InputLabelText} 
-                            inputContainerStyle={{...GeneralStyles.InputBox,backgroundColor:ColorPalette.input2}} 
-                            keyboardType='number-pad'
-                            selectTextOnFocus={true} 
-                            label='Bodyfat (%)'
-                            disabled={true}
-                        />
-                        <Button 
-                            containerStyle={GeneralStyles.ButtonContainerStyleGeneral}
-                            buttonStyle={{backgroundColor:ColorPalette.c4}}
-                            title="Help me estimate"
-                            onPress={()=>{}}   
-                        />
-                        <Button containerStyle={GeneralStyles.ButtonContainerStyleGeneral}
-                                buttonStyle={{backgroundColor:ColorPalette.c3}}
-                                title='Next'
-                                onPress={()=>navigation.navigate('Profile_4')}
-                                
-                        />
-
-                    </ScrollView>
+                <ProfileFloater>
+                    <Input 
+                        labelStyle={GeneralStyles.InputLabelText} 
+                        inputContainerStyle={GeneralStyles.InputBox} 
+                        keyboardType='number-pad'
+                        selectTextOnFocus={true} 
+                        label='Neck Circumference (cm)'
+                    />
+                    <Input 
+                        labelStyle={GeneralStyles.InputLabelText} 
+                        inputContainerStyle={GeneralStyles.InputBox} 
+                        keyboardType='number-pad'
+                        selectTextOnFocus={true} 
+                        label='Waist Circumference (cm)'
+                    />
+                    <Input 
+                        labelStyle={GeneralStyles.InputLabelText} 
+                        inputContainerStyle={GeneralStyles.InputBox} 
+                        keyboardType='number-pad'
+                        selectTextOnFocus={true} 
+                        label='Hip Circumference (cm)'
+                    />  
+                    <Input 
+                        labelStyle={GeneralStyles.InputLabelText} 
+                        inputContainerStyle={{...GeneralStyles.InputBox,backgroundColor:ColorPalette.input2}} 
+                        keyboardType='number-pad'
+                        selectTextOnFocus={true} 
+                        label='Bodyfat (%)'
+                        disabled={true}
+                    />
+                    <Button 
+                        containerStyle={GeneralStyles.ButtonContainerStyleGeneral}
+                        buttonStyle={{backgroundColor:ColorPalette.c4}}
+                        title="Help me estimate"
+                        onPress={()=>{}}   
+                    />
+                    <Button containerStyle={GeneralStyles.ButtonContainerStyleGeneral}
+                            buttonStyle={{backgroundColor:ColorPalette.c3}}
+                            title='Next'
+                            onPress={()=>navigation.navigate('Profile_3')}
+                            
+                    />
+                </ProfileFloater>
                 
                 
             </DismissKeyboardView>

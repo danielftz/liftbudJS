@@ -1,31 +1,28 @@
 import React from 'react';
-import {View,StyleSheet,Dimensions} from 'react-native';
-import { GestureHandlerRootView, ScrollView } from 'react-native-gesture-handler';
+import {StyleSheet,Dimensions} from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import GeneralStyles from '../GeneralStyles';
 
 const ProfileFloater = ({children}) =>{
     return (
-        <ScrollView contentContainerStyle={styles.scroll}>
-            <View style={styles.regular}>
-                {children}
-            </View>
+        <ScrollView style = {styles.scrollStyle} 
+        contentContainerStyle={styles.contentStyle} >
+            {children}
         </ScrollView>
     )
 }
 
 const styles = StyleSheet.create({
-    scroll:{
-        zIndex:999,
-        backfaceVisibility:'hidden'
+    scrollStyle:{
+        paddingTop:330,
     },
-    regular:{
+    contentStyle:{
+        ...GeneralStyles.Shadow,
         padding:30,
-        marginBottom:200,
-        left:Dimensions.get('window').width/10,
-        top:Dimensions.get('window').height/4,
+        position:'absolute',
         width:Dimensions.get('window').width/10*8,
         backgroundColor:'white',
-
+        alignSelf:'center'
     }
 })
 
