@@ -8,7 +8,7 @@ import TitleCard from '../../components/TItleCard';
 import GeneralStyles from '../../GeneralStyles';
 
 const ProfileScreen_0 = ({navigation}) =>{
-
+    //use context later??
     const [sex, setSex] = useState('Male');
 
     return (
