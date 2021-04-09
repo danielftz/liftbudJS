@@ -22,17 +22,23 @@ const instance = axios.create({
 // );
 
 const signonPOST = async({email,password}) =>{
-    let response='';
-    let error='';
+    //correct output: either response is undefined or error is undefined
+    console.log("email"+email);
+    let error;
+    let token;
     try{
-        //console.log("waiting...")
-        const response = await instance.get('/',{email,password});
-        //console.log("got it...")
-        //console.log(response.data.toString());
-        return {response:response.data,error};
-    }catch(err){
-        return {response,error};
-    }
-}
+        //receive the jwt token if authorization passes
+        token = await instance.post('/signon',{email,password});
+        token = resp.data.token;
+        //store token in device
+        await AsyncStorage.setItem('token',token);
+    }catch(err){ 
+        //console.log('raw: '+err.response.data.internalErr);
+        error = err.response.data.internalErr;
+    };
+    return {token,error};
+};
+
+
 
 export default {signonPOST};
